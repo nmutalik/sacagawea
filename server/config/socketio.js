@@ -53,5 +53,6 @@ module.exports = function (socketio) {
   });
 
   // Insert sockets below
+  require('../api/business/business.socket').register(socketio);
   require('../api/thing/thing.socket').register(socketio);
 };
