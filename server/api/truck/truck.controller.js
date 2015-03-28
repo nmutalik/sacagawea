@@ -2,6 +2,15 @@
 
 var _ = require('lodash');
 var Truck = require('./truck.model');
+var kd = require('kdtree');
+
+var company_tree = new kd.KDTree(2);
+Truck.find({}, function(err, trucks){
+  for (var i = 0; i < trucks.length; ++i) {
+    company_tree.insert(trucks[i].lat, trucks[i].lng, trucks[i]._id);
+  }
+  console.log('Successfully inserted trucks in kdtree');
+});
 
 /**
  * Middleware functions

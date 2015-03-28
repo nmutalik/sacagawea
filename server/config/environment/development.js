@@ -5,7 +5,7 @@
 module.exports = {
   // MongoDB connection options
   mongo: {
-    uri: 'mongodb://localhost/sacagawea-dev'
+    uri: 'mongodb://dev.sirenweather.com/sacagawea-dev'
   },
 
   seedDB: true

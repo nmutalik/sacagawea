@@ -2,6 +2,15 @@
 
 var _ = require('lodash');
 var Business = require('./business.model');
+var kd = require('kdtree');
+
+var company_tree = new kd.KDTree(2);
+Business.find({}, function(err, businesses){
+  for (var i = 0; i < businesses.length; ++i) {
+    company_tree.insert(businesses[i].lat, businesses[i].lng, businesses[i]._id);
+  }
+  console.log('Successfully inserted businesses in kdtree');
+});
 
 /**
  * Middleware functions
