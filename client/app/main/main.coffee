@@ -4,6 +4,6 @@ angular.module 'sacagaweaApp'
 .config ($stateProvider) ->
   $stateProvider
   .state 'main',
-    url: '/default'
+    url: '/'
     templateUrl: 'app/main/main.html'
     controller: 'MainCtrl'

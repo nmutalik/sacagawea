@@ -1,4 +1,4 @@
-// Generated on 2015-02-28 using generator-angular-fullstack 2.0.13
+// Generated on 2015-03-28 using generator-angular-fullstack 2.0.13
 'use strict';
 
 module.exports = function (grunt) {
@@ -16,7 +16,6 @@ module.exports = function (grunt) {
     ngtemplates: 'grunt-angular-templates',
     cdnify: 'grunt-google-cdn',
     protractor: 'grunt-protractor-runner',
-    injector: 'grunt-asset-injector',
     buildcontrol: 'grunt-build-control'
   });
 
