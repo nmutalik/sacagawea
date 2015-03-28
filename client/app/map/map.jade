@@ -2,5 +2,8 @@
   .map-panel
     #map-canvas
   .side-panel
-    .map-list-item(ng-repeat="fault in faults")
-      {{fault.title}}
+    {{companyLength}},{{serviceLength}}
+    h1 Faults
+    .scroll-panel
+      .map-list-item(ng-repeat="fault in faultValues" ng-click="goToFault(fault)")
+        {{fault.name}}
